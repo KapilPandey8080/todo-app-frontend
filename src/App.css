@@ -1,0 +1,307 @@
+/* General Body and Background Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5;
+}
+
+.app-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #ece9e6 0%, #ffffff 100%);
+}
+
+/* --- Authentication Form Styles --- */
+.auth-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+}
+
+.auth-card h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+
+.auth-card .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.auth-card label {
+  display: block;
+  color: #555;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.auth-card input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+.btn {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #007bff 0%, #0056b3 100%);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 15px 0 rgba(0, 123, 255, 0.3);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px 0 rgba(0, 123, 255, 0.4);
+}
+
+.auth-card .divider {
+  margin: 1.5rem 0;
+  text-align: center;
+  color: #aaa;
+  position: relative;
+}
+.auth-card .divider::before,
+.auth-card .divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background: #ddd;
+}
+.auth-card .divider::before { left: 0; }
+.auth-card .divider::after { right: 0; }
+
+
+.auth-card .google-login-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.auth-card .toggle-auth {
+  text-align: center;
+}
+
+.auth-card .toggle-auth button {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+
+/* --- Todo List Styles --- */
+.todo-container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  width: 100%;
+  max-width: 700px;
+  box-sizing: border-box;
+}
+
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.todo-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin: 0;
+}
+
+.logout-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    background: #dc3545;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.logout-btn:hover {
+    background: #c82333;
+}
+
+.add-todo-form {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.add-todo-form input {
+    flex-grow: 1;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+.add-todo-form input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+.add-todo-form button {
+    margin-left: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.add-todo-form button:hover {
+    background: #0056b3;
+}
+
+.todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: #fafafa;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.todo-item:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transform: translateY(-2px);
+}
+
+.todo-item .todo-content {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.todo-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.todo-item .todo-text {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.todo-item .todo-text.completed {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.todo-item .todo-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+.todo-item .edit-btn { color: #ffc107; }
+.todo-item .edit-btn:hover { color: #e0a800; }
+.todo-item .delete-btn { color: #dc3545; }
+.todo-item .delete-btn:hover { color: #c82333; }
+
+.edit-form {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+}
+.edit-form input {
+    flex-grow: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.edit-form .save-btn {
+    margin-left: 0.5rem;
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.edit-form .cancel-btn {
+    margin-left: 0.5rem;
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
